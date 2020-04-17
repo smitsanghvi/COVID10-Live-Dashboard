@@ -27,7 +27,7 @@ export default class App extends Component {
 
   //for displaying the data of all the countries
   componentDidMount() {
-    const url = "https://corona.lmao.ninja/countries?sort=country";
+    const url = "https://corona.lmao.ninja/v2/countries?sort=country";
     fetch(url)
       .then((result) => result.json())
       .then((result) => {
@@ -40,7 +40,7 @@ export default class App extends Component {
       });
 
     //for displaying data in the card component
-    const totalUrl = "https://corona.lmao.ninja/all";
+    const totalUrl = "https://corona.lmao.ninja/v2/all";
     fetch(totalUrl)
       .then((result) => result.json())
       .then((result) => {
